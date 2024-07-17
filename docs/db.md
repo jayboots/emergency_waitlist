@@ -96,16 +96,21 @@ CREATE TABLE `waitlist` (
 )
 ```
 
-
-Translate your ERD into a SQL Schema (for example `CREATE TABLE patients`).
-This should be valid SQL (hint: it should run on your applications database, e.g. `emergency_waitlist`).
-
-Commit these changes and push to [GitHub](https://github.com/).
-
 #### Sample Data (SQL INSERT)
 
-Create sample data that you can later use for testing.  For example,
-`INSERT INTO patients (name, ...) VALUES ('james', ...)`.
-This should be valid SQL.
+Sample insert statement
 
-Commit these changes and push to [GitHub](https://github.com/).
+```sql
+INSERT INTO `usertype`(`type_id`, `type_name`) VALUES (NULL,'Patient')
+```
+
+With auto-increment set to the primary key, this inserting:
+
+```sql
+-- Dumping data for table `usertype`
+INSERT INTO `usertype` (`type_id`, `type_name`) VALUES
+(1, 'System Administrator'),
+(2, 'Doctor'),
+(3, 'Nurse'),
+(4, 'Patient'),
+```
